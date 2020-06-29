@@ -2,7 +2,7 @@
     <div>
       <div class="inline">
         <app-headline [title]="'Услуги'"></app-headline>
-        <button (click)="saveInformation()">Сохранить</button>
+        <!-- <button (click)="saveInformation()">Сохранить</button> -->
       </div>
       <form [formGroup]="production">
         <div class="form-group">
@@ -29,14 +29,16 @@
           >
           </editor>
         </div>
+        <button (click)="saveInformation()">Сохранить</button>
       </form>
     </div>
   
     <div>
       <div class="inline">
         <app-headline [title]="'Услуги'"></app-headline>
-        <button routerLink='/admin/edit-service/add'><i class="material-icons">add</i> услугу</button>
+        <!-- <button routerLink='/admin/edit-service/add'><i class="material-icons">add</i> услугу</button> -->
       </div>
+      <button routerLink='/admin/edit-service/add'><i class="material-icons">add</i> услугу</button>
       <div class="table">
         <table>
           <thead>

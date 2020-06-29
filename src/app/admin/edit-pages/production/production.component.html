@@ -2,7 +2,6 @@
   <div>
     <div class="inline">
       <app-headline [title]="'Продукция'"></app-headline>
-      <button (click)="saveInformation()">Сохранить</button>
     </div>
     <form [formGroup]="production">
       <div class="form-group">
@@ -29,16 +28,17 @@
         >
         </editor>
       </div>
+      <button (click)="saveInformation()">Сохранить</button>
     </form>
   </div>
 
   <div>
     <div class="inline">
       <app-headline [title]="'Продукция'"></app-headline>
-      <button routerLink='/admin/edit-products/add'><i class="material-icons">add</i> продукцию</button>
     </div>
-    <div class="table">
-      <table>
+    <button routerLink='/admin/edit-products/add'><i class="material-icons">add</i> продукцию</button>
+    <div class="table-responsive">
+      <table class="table">
         <thead>
         <tr>
           <th>Название</th>
