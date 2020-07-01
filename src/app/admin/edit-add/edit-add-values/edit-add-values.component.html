@@ -6,11 +6,13 @@
     <div class="form-group">
       <div class="image-block">
         <h2>Фотография</h2>
+        
         <div class="image-control-wrapper">
-          <label for="uploadImage">Загрузить изображение</label>
+          <!-- <label for="uploadImage">Загрузить изображение</label> -->
           <div class="image-preview-block" *ngIf="!imagePreview && f.image.value">
             <img class="image-preview" src="{{ f.image.value }}" alt="image">
           </div>
+          <!-- <label for="uploadImage">Загрузить изображение</label> -->
             <ng-template [ngIf]="imagePreview">
 
             <div class="image-preview-block">
@@ -18,7 +20,9 @@
             </div>
           </ng-template>
           <input id="uploadImage" name="uploadImage" class="uploadImage" type="file" accept=".png, .jpg, .jpeg" (change)="changeValue($event)">
+          <!-- <label for="uploadImage">Загрузить изображение</label> -->
         </div>
+        <label for="uploadImage">Загрузить изображение</label>
         <div *ngIf="!imageURL && !f.image.value" [ngStyle]="{'color': 'red'}"> Фотография обязательна </div>
       </div>
     </div>

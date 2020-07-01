@@ -2,7 +2,7 @@
   <div>
     <div class="inline">
       <app-headline [title]="'О компании'"></app-headline>
-      <button (click)="saveInformationAC()">Сохранить</button>
+      <!-- <button (click)="saveInformationAC()">Сохранить</button> -->
     </div>
     <form [formGroup]="aboutCompany">
       <div class="form-group">
@@ -28,6 +28,7 @@
         >
         </editor>
       </div>
+      <button (click)="saveInformationAC()">Сохранить</button>
     </form>
   </div>
 <!--  <div>
@@ -68,8 +69,10 @@
   <div>
     <div class="inline">
       <app-headline [title]="'Разработки'"></app-headline>
-      <button class="add" routerLink="/admin/edit-about-company/values/add"><i class="material-icons">add</i></button>
+      <!-- <button class="add" routerLink="/admin/edit-about-company/values/add"><i class="material-icons">add</i></button> -->
     </div>
+    <button class="add" routerLink="/admin/edit-about-company/values/add"><i class="material-icons">add</i></button>
+    <div class="table-responsive">
     <table class="table">
       <thead>
       <tr>
@@ -92,6 +95,7 @@
       </tr>
       </tbody>
     </table>
+    </div>
     <div class="navigation">
       <ngb-pagination (pageChange)="changePageValues($event)" [collectionSize]="countValues" [pageSize]="pageSizeForValues" [(page)]="pageValue"
                       [boundaryLinks]="false"></ngb-pagination>

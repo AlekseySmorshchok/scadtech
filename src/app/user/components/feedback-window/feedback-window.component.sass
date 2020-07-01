@@ -15,7 +15,8 @@ form
 
 .input.fluid
   margin: 10px 0
-  width: 100%
+  width: 300px
+  margin-left: 50px
   display: grid
 
 textarea
@@ -29,3 +30,13 @@ button
 a
   color: $main-color
   text-decoration: underline
+
+@media only screen and (max-width: 500px)
+  .list
+    display: flex
+    flex-direction: column
+    align-items: center
+  .input .fluid
+    width:300px
+   
+  
